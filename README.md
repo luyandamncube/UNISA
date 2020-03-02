@@ -1,4 +1,9 @@
 # UNISA
+
+<p align="center">
+  <img src="unisa.jpg"/>
+</p>
+
 ## 98801 - MCS
 A collection of modules I completed whilst finishing my Computer Science & Mathematics degree part-time with UNISA.
 
