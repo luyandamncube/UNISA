@@ -12,15 +12,15 @@ A collection of modules I completed whilst finishing my Computer Science & Mathe
 - [x] MAT1512 - Calculus A
 
 ## Second year
-- [ ] APM2611 - Differential Equations 	Pre-requisite:MAT1503 (or XAT1503) & MAT1613
-- [ ] COS2601 - Theoretical Computer Science II 	Pre-requisite:COS1501 (or XOS1501) or MAT2612
-- [x] COS2611 - Programming: Data Structures 	Pre-requisite:COS1512 (or XOS1512)
-- [ ] COS2614 - Programming: Contemporary Concepts 	Pre-requisite:COS1512 (or XOS1512)
-- [ ] COS2633 - Numerical Methods I 	Pre-requisite:COS1511 (or XOS1511), MAT1512 (or XAT1512) & MAT1503 (or XAT1503)
-- [ ] COS2661 - Formal Logic II 	Pre-requisite:COS1501 (or XOS1501)
-- [ ] MAT1613 - Calculus B 	Pre-requisite:MAT1512 (or XAT1512)
-- [ ] MAT2611 - Linear Algebra 2 	Pre-requisite:MAT1503 (or XAT1503)
-- [ ] MAT2612 - Introduction to Discrete Mathematics 	Pre-requisite:COS1501 (or XOS1501) or MAT1512 (or XAT1512) or MAT1503 (or XAT1503)
+- [ ] APM2611 - Differential Equations 	Pre-requisite:MAT1503 & MAT1613
+- [ ] COS2601 - Theoretical Computer Science II 	Pre-requisite:COS1501 or MAT2612
+- [x] COS2611 - Programming: Data Structures 	Pre-requisite:COS1512
+- [ ] COS2614 - Programming: Contemporary Concepts 	Pre-requisite:COS1512
+- [ ] COS2633 - Numerical Methods I 	Pre-requisite:COS1511, MAT1512 & MAT1503
+- [ ] COS2661 - Formal Logic II 	Pre-requisite:COS1501
+- [ ] MAT1613 - Calculus B 	Pre-requisite:MAT1512
+- [ ] MAT2611 - Linear Algebra 2 	Pre-requisite:MAT1503
+- [ ] MAT2612 - Introduction to Discrete Mathematics 	Pre-requisite:COS1501 or MAT1512 or MAT1503
 - [ ] MAT2613 - Real Analysis I 	Pre-requisite:MAT1613
 - [ ] MAT2615 - Calculus in Higher Dimensions 	Pre-requisite:MAT1512 or MAT1503
 - [ ] PLS2607 - Philosophy of Science
@@ -30,8 +30,8 @@ A collection of modules I completed whilst finishing my Computer Science & Mathe
 - [ ] COS3701 - Theoretical Computer Science III 	Pre-requisite:COS2601
 - [ ] COS3711 - Advanced Programming 	Pre-requisite:COS2611 & COS2614
 - [ ] COS3721 - Operating Systems and Architecture 	Pre-requisite:COS2614
-- [ ] COS3751 - Techniques of Artificial Intelligence 	Pre-requisite:COS2611 & COS2661 (Not applicable to 98801-AMC & 98801-XAC)
-- [ ] COS3761 - Formal Logic III 	Pre-requisite:COS2661 (Not applicable to 98801-AMC & 98801-XAC)
+- [ ] COS3751 - Techniques of Artificial Intelligence 	Pre-requisite:COS2611 & COS2661
+- [ ] COS3761 - Formal Logic III 	Pre-requisite:COS2661
 - [ ] MAT3701 - Linear Algebra III 	Pre-requisite:MAT2611
 - [ ] MAT3705 - Complex Analysis 	Pre-requisite:MAT2615
 - [ ] MAT3706 - Ordinary Differential Equations 	Pre-requisite:APM2611
