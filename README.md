@@ -4,8 +4,8 @@ A collection of modules I completed whilst finishing my Computer Science & Mathe
 
 ## First year
 - [x] COS1501 - Theoretical Computer Science I 	
-- [x] COS1511 - Introduction to Programming I 	
-- [x] COS1512 - Introduction to Programming II 	Pre-requisite:COS1511 
+- [x] [COS1511 - Introduction to Programming I](https://github.com/luyandamncube/UNISA/tree/master/year1/COS1511) 	
+- [x] [COS1512 - Introduction to Programming II 	Pre-requisite:COS1511](https://github.com/luyandamncube/UNISA/tree/master/year1/COS1512) 
 - [x] COS1521 - Computer Systems: Fundamental Concepts 	
 - [x] EUP1501 - Ethical Information and Communication Technologies for Development Solutions 	
 - [x] MAT1503 - Linear Algebra I 	
@@ -14,8 +14,8 @@ A collection of modules I completed whilst finishing my Computer Science & Mathe
 ## Second year
 - [ ] APM2611 - Differential Equations 	Pre-requisite:MAT1503 & MAT1613
 - [ ] COS2601 - Theoretical Computer Science II 	Pre-requisite:COS1501 or MAT2612
-- [x] COS2611 - Programming: Data Structures 	Pre-requisite:COS1512
-- [ ] COS2614 - Programming: Contemporary Concepts 	Pre-requisite:COS1512
+- [x] [COS2611 - Programming: Data Structures 	Pre-requisite:COS1512](https://github.com/luyandamncube/UNISA/tree/master/year2/COS2611)
+- [ ] [COS2614 - Programming: Contemporary Concepts 	Pre-requisite:COS1512](https://github.com/luyandamncube/UNISA/tree/master/year2/COS2614)
 - [ ] COS2633 - Numerical Methods I 	Pre-requisite:COS1511, MAT1512 & MAT1503
 - [ ] COS2661 - Formal Logic II 	Pre-requisite:COS1501
 - [ ] MAT1613 - Calculus B 	Pre-requisite:MAT1512
