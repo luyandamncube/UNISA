@@ -1,0 +1,29 @@
+a   valid   assignment operator
+
+b   valid   link pointer of list is assigned the value of the link pointer of A
+
+c   valid   list->info refers to a valid member of the struct nodeType
+
+d   valid   list-> is the next node
+            list->link is the next node 
+            therefore, list->link->info refers to the info of the next availible node
+            (double arrow operator)
+
+e   valid   assignment of the dereferenced pointer B to the address of A
+
+f   valid   A->link refers to the next node 
+            therefore, A-link->info refers to the info of the next availible node
+            (double arrow operator)
+
+g   valid   assignment of the info in node B to info in node B
+
+h   valid   B refers to node the first node  
+            B->link refers to the second node  
+            B-link->link refers to the third node 
+            therefore, the statement assigns the third node of B to list
+
+i   valid   B refers to node the first node  
+            B->link refers to the second node  
+            B-link->link refers to the third node 
+            B-link->link->link refers to the fourth node
+            therefore, the statement iterates to the fourth node

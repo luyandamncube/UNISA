@@ -1,0 +1,30 @@
+Q01     ANSWER: O(1)                    NUMBER 1.
+Q02     ANSWER: O(1)                    NUMBER 1.
+Q03     ANSWER: O(N)                    NUMBER 3.
+Q04     ANSWER: O(N^3)                  NUMBER 4.
+Q05     ANSWER: O(N^3)                  NUMBER 3.
+Q06     ANSWER: O(N^2)                  NUMBER 3.
+Q07     ANSWER: O(N^3)                  NUMBER 2.
+Q08     ANSWER: O(N^2)                  NUMBER 1.
+Q09     ANSWER: O(N)                    NUMBER 3.
+Q10     ANSWER: O(N)                    NUMBER 3.
+Q11     ANSWER: O(N)                    NUMBER 3.
+Q12     ANSWER: O(N^2)                  NUMBER 3.
+Q13     ANSWER: O(N^2)                  NUMBER 2.
+Q14     ANSWER: O(N^2)                  NUMBER 2.
+Q15     ANSWER: O(NlogN)                NUMBER 4.
+Q16     ANSWER: O(N^2)                  NUMBER 1.
+Q17     ANSWER: O(logN)                 NUMBER 1.
+Q18     ANSWER: O(N^2)                  NUMBER 2.
+Q19     ANSWER: O(N)                    NUMBER 1.
+Q20     ANSWER: 75 seconds              NUMBER 3.
+Q21     ANSWER: 80 seconds              NUMBER 4.
+Q22     ANSWER: ????                    NUMBER 1.
+Q23     ANSWER: 400 seconds             NUMBER 3.
+Q24     ANSWER: 25 seconds              NUMBER 1.
+Q25     ANSWER: O(logN)                 NUMBER 3.
+Q26     ANSWER: O(logN +1)              NUMBER 4.
+Q27     ANSWER: nlogn, 10logn, 2n^2     NUMBER 4.
+Q28     ANSWER: 2^N, 2^4, N^3, NlogN    NUMBER 4.
+Q29     ANSWER: O(N^2)                  NUMBER 2.
+Q30     ANSWER: O(NlogN)                NUMBER 4.
