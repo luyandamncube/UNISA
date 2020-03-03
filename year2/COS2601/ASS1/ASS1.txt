@@ -1,0 +1,10 @@
+Q01     bababab                                 NUMBER 4.
+Q02                                             NUMBER 1. ???
+Q03     bbabb                                   NUMBER 1.
+Q04                                             NUMBER 3. ???
+Q05     abab                                    NUMBER 1.
+Q06     baba                                    NUMBER 4. ???
+Q07     ((ab)*(ba)*)*                           NUMBER 2.
+Q08     (a + b)*a(a + b)*bbb(a + b)*            NUMBER 2.
+Q09     abbabbb                                 NUMBER 1.
+Q10     aaa*[ab(a*b*)* + babab)(a*b*)* + ba]    NUMBER 2.

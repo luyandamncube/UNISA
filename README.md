@@ -1,7 +1,7 @@
 # UNISA
 
 <p align="center">
-  <img src="unisa.jpg"/>
+  <img src="src/unisa.jpg"/>
 </p>
 
 ## 98801 - MCS
