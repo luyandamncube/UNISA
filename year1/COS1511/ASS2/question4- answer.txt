@@ -1,0 +1,57 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+//printTabs function to calculate and output table
+void printTabs(int startValO, int rowO, int incrementO)
+{
+    int answer;
+
+    for(int i = 1; i <= rowO ; i++)//start loop to control rows
+    {
+
+        for(int j = 1; j <= 3; j++)//loop to control columns
+        {
+            answer = pow(startValO, j);//expression to calculate square and cube of starting value/incremented value with column j
+            cout << answer << '\t';//out put of integer answer
+        }//end of column loop
+
+        startValO += incrementO; // to increment the initial value 
+        cout << endl;
+
+    }//end of row loop
+}//*********************End of printTabs********************//
+
+
+//selTabs to 
+void selTabs(int startValP, int rowP, int incrementP)
+{
+    //if statement to set increment to 1 if a value of 0 or less us input
+    if(incrementP < 1)
+        incrementP = 1;
+        
+    printTabs(startValP, rowP, incrementP);
+}
+
+//main function to call table from function printTabs
+int main()
+{
+    int startVal, rows, increment;
+
+    //user instructions and input
+    cout << "Enter the starting value of the table: ";
+    cin >> startVal;
+    cout << "Enter the number of values to be displayed: ";
+    cin >> rows;
+    cout << "Enter the increment between the values: ";
+    cin >> increment;
+
+
+    //display headings
+    cout << "NUMBER" << '\t' << "SQUARE" << '\t' << "CUBE" << endl;
+    //call and produce table from void function printTabs
+    selTabs(startVal, rows, increment);
+
+    return 0;
+
+}//end of main 

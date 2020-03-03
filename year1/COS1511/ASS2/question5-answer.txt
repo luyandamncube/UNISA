@@ -1,0 +1,134 @@
+ #include <iostream>
+                            #include <time.h>
+                            #include <stdlib.h>
+
+                            // This program is writen by KHUMBELO DIFFERENCE MUTHAVHINE from Ha- Vhangani . Khumbelo is a programmer 
+
+                            using namespace std;
+                            // call function calculateCarpetSize
+                               void CalculateCarpetSize (int  &length, int &width, int &carpetSize)
+                               {
+
+                                      carpetSize = length * width;
+
+                               }
+
+
+                            // call function calculateCarpetCost
+                            void CalculateCarpetCost (int &carpetSize , float &sellingPrice , float &carpetCost  )
+                            {
+
+                                float tax = 0.14;
+                                carpetCost = carpetSize * sellingPrice * tax;
+
+                            }
+
+
+                            // call function calculateLabourCost
+                            CalculateLabourCost(int &carpetSize , int &labour, float &labourCost)
+                            {
+
+                                labourCost = carpetSize * labour;
+                             }
+
+                              bool qualifyForDiscount(int &customerNo){
+
+
+                                 if (customerNo <=9999)
+                                    {
+                                      void computeDiscount (float &carpetCost );
+                                    return true ;
+                                    }
+                                    else{return false;
+                                    }
+
+                                }
+
+                                       // call function computeDiscount
+                                    void computeDiscount (float &carpetCost, float &discountPercentage )
+                                       {
+
+                                        cout << "Enter the percetage discout: "<< endl;
+                                        cin >> discountPercentage ;
+                                        carpetCost = carpetCost * discountPercentage;
+
+                                       }
+
+
+                                  // call function printCustomerStatement
+                              void printCustomerStatement( )
+                                  {
+                                  cout.setf(ios::fixed);
+                                  cout << endl;
+                                  cout << "CROSWELL CARPET STORE" << endl;
+                                  cout << "STATEMENT" << endl;
+
+
+
+
+                              }
+                            int main()
+                            {
+                              int customerNo;
+                              string customerName, customersurname;
+                              float roomLength;
+                              float roomWidth, discountPercentage;
+
+                              float sellingPrice;
+                              float carpetCost;
+                              float labourCost;
+                              float discount;
+                              int carpetSize;
+                              int rooLength, roonWidth;
+                              int labour = 24;
+                              //float labourCost;
+
+                               cout.setf(ios::fixed);
+                               cout.precision(2);
+                               cout << "\nPlease enter the following information: ";
+                               cout << "\n Customer FIRST name: ";
+                               cin >> customerName;
+                               cout << "\n Customer LAST name: ";
+                               cin >> customersurname;
+                               cout << "\n Customer number: ";
+                               cin >> customerNo;
+                               cout << "\n The length of the room: ";
+                               cin >> roomLength;
+                               cout << "\n The width of the room: ";
+                               cin >> roomWidth;
+                               cout << "\n The carpet selling price: ";
+                               cin >> sellingPrice;
+                               // call function calculateCarpetSize
+                             CalculateCarpetSize (rooLength, roonWidth, carpetSize);
+                               // call function calculateCarpetCost
+                             CalculateCarpetCost (carpetSize ,sellingPrice, carpetCost  );
+                            // call function calculateLabourCost
+                             CalculateLabourCost(carpetSize , labour, labourCost);
+                             if (customerNo<= 9999){
+                             bool   qualityForDiscout(customerNo);
+                             computeDiscount (carpetCost, discountPercentage );
+                             }
+
+                              // call function computeDiscount
+
+
+
+
+
+                                        // call function printCustomerStatement
+                                 // printCustomerStatement(customerName, customerNo, carpetCost, labourCost, discount);
+                                  printCustomerStatement();
+
+                               cout << "\n Customer name: ";
+                               cout << customerName <<  customersurname<<endl;
+                               cout << "\n Customer number: ";
+                               cout << customerNo <<endl;
+                               cout << "\n The length of the room: ";
+                               cout << roomLength <<endl;
+                               cout << "\n The width of the room: ";
+                               cout<< roomWidth <<endl;
+                               cout << "\n The carpet selling price: ";
+                               cout<< "sellingPrice:" <<  sellingPrice <<endl;
+
+                             return 0;
+                            } // end main
