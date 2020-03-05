@@ -18,7 +18,7 @@ A collection of modules I completed whilst finishing my Computer Science & Mathe
 
 ## Second year
 - [ ] APM2611 - Differential Equations 	Pre-requisite:MAT1503 & MAT1613
-- [ ] COS2601 - Theoretical Computer Science II 	Pre-requisite:COS1501 or MAT2612
+- [ ] [COS2601 - Theoretical Computer Science II 	Pre-requisite:COS1501 or MAT2612](https://github.com/luyandamncube/UNISA/tree/master/year2/COS2601)
 - [x] [COS2611 - Programming: Data Structures 	Pre-requisite:COS1512](https://github.com/luyandamncube/UNISA/tree/master/year2/COS2611)
 - [ ] [COS2614 - Programming: Contemporary Concepts 	Pre-requisite:COS1512](https://github.com/luyandamncube/UNISA/tree/master/year2/COS2614)
 - [ ] COS2633 - Numerical Methods I 	Pre-requisite:COS1511, MAT1512 & MAT1503
