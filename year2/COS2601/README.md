@@ -6,7 +6,7 @@
 - [GraphViz](https://graphviz.gitlab.io/_pages/Download/Download_windows.html) provides a good tool for drawing Finite Automata:
 
  <p align="center">
-  <img src="src/fa.png"/>
+  <img src="../../src/fa.png"/>
 </p>
 
 
