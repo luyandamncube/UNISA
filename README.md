@@ -22,7 +22,7 @@ A collection of modules I completed whilst finishing my Computer Science & Mathe
 - [x] [COS2611 - Programming: Data Structures 	Pre-requisite:COS1512](https://github.com/luyandamncube/UNISA/tree/master/year2/COS2611)
 - [ ] [COS2614 - Programming: Contemporary Concepts 	Pre-requisite:COS1512](https://github.com/luyandamncube/UNISA/tree/master/year2/COS2614)
 - [ ] COS2633 - Numerical Methods I 	Pre-requisite:COS1511, MAT1512 & MAT1503
-- [ ] COS2661 - Formal Logic II 	Pre-requisite:COS1501
+- [ ] [COS2661 - Formal Logic II 	Pre-requisite:COS1501](https://github.com/luyandamncube/UNISA/tree/master/year2/COS2661)
 - [ ] MAT1613 - Calculus B 	Pre-requisite:MAT1512
 - [ ] MAT2611 - Linear Algebra 2 	Pre-requisite:MAT1503
 - [ ] MAT2612 - Introduction to Discrete Mathematics 	Pre-requisite:COS1501 or MAT1512 or MAT1503
