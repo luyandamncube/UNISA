@@ -2,6 +2,8 @@
 
 ## COS2601 - Theoretical Computer Science II 	
 - This was a module I completed while studying at the University of South Africa.
+
+## Resources
 - [NESO Academy's](https://www.youtube.com/watch?v=58N2N7zJGrQ&list=PLBlnK6fEyqRgp46KUv4ZY69yXmpwKOIev) playlist on youtue was a great source for a crash course on this topic
 - [GraphViz](https://graphviz.gitlab.io/_pages/Download/Download_windows.html) provides a good tool for drawing Finite Automata:
 
