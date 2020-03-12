@@ -1,5 +1,4 @@
 #include "coordinate.h"
-
 //Constructor: initialize objects of class Coordinate
 Coordinate::Coordinate(int _degrees, int _minutes, int _seconds, QChar _direction)
     : degrees(_degrees), minutes(_minutes), seconds(_seconds), direction(_direction){
@@ -21,6 +20,7 @@ double Coordinate::toDecimal(){
     //ternary operator: assign positive if direction is 'N' or 'E'
     cardinalDirection = (direction == 'N' || direction == 'E') ? 1 : -1;
     //geographic coordinate to decimal
+
     dec = (degrees + minutes/60 + seconds/3600)*cardinalDirection;
     return(dec);
 }
