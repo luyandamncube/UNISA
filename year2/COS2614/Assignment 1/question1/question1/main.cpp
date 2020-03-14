@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
     QStringList coordinateList;
     QMessageBox::StandardButton reply;
     do{
-        inputCoordinates =QInputDialog::getText(0,"Input","Please enter a coordinate (e.g. 52 13 10)",
+        inputCoordinates =QInputDialog::getText(0,"Input","Please enter a coordinate (e.g. 25 46 3 S)",
                                              QLineEdit::Normal, QString(""), &ok);
         coordinateList = inputCoordinates.split(" ");
         if(!ok){

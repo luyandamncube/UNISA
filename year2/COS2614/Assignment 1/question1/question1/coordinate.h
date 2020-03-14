@@ -10,7 +10,6 @@ class Coordinate {
         QChar direction;
     public:
         //Constructor
-        //QChar
         Coordinate(int degrees, int minutes, int seconds, QChar direction);
         QString toString();
         double toDecimal();
