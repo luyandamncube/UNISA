@@ -2,6 +2,7 @@
 
 ## COS2661 - Formal Logic II
 - This was a module I completed while studying at the University of South Africa.
+- Kimberly Brehm has a crash course [playlist](https://www.youtube.com/watch?v=A3Ffwsnad0k&list=PLl-gb0E4MII2nPPl6JThRBs_mb26mabaP) on discrete math topics related to this course 
 
 ## Resources
 - [Logical Possibility](https://www.ocf.berkeley.edu/~brianwc/courses/logic/notes04.html)
