@@ -8,12 +8,13 @@
 - [Logical Possibility](https://www.ocf.berkeley.edu/~brianwc/courses/logic/notes04.html)
 - [Logic Of Boolean Connectives](https://faculty.washington.edu/smcohen/120/Chapter4.pdf) 
 - [Truth Tables, Tautologies, and Logical Equivalences](http://sites.millersville.edu/bikenaga/math-proof/truth-tables/truth-tables.html)
+- [Logic of Conditionals](https://faculty.washington.edu/smcohen/120/Chapter8.pdf)
 
 ### Assignment 1
-* [Classes ]()(Classes, Headers, Containers, Makefiles, Functions)
+* [Atomic Sentences, The Logic of Atomic Sentences, The Logic of Boolean Connectives](https://github.com/luyandamncube/UNISA/tree/master/year2/COS2661/ASS1/ASS1.txt)
 
 ### Assignment 2
-* [Inheritance]() (Inheritance & Polymorphism, Design Patterns, Qobjects)
+* [Methods of Proof for Boolean Logic, Formal Proofs and Boolean Logic, Conditionals, The Logic of Conditionals, Introduction of Quantification, The Logic of Quantifiers](https://github.com/luyandamncube/UNISA/tree/master/year2/COS2661/ASS2/ASS2.docx)
 
 ### Exam
 - All the above concepts tested
