@@ -9,6 +9,7 @@
 - [Logic Of Boolean Connectives](https://faculty.washington.edu/smcohen/120/Chapter4.pdf) 
 - [Truth Tables, Tautologies, and Logical Equivalences](http://sites.millersville.edu/bikenaga/math-proof/truth-tables/truth-tables.html)
 - [Logic of Conditionals](https://faculty.washington.edu/smcohen/120/Chapter8.pdf)
+- [Fitch Rule Summary](https://www.ocf.berkeley.edu/~brianwc/courses/logic/rulesummary.html)
 
 ### Assignment 1
 * [Atomic Sentences, The Logic of Atomic Sentences, The Logic of Boolean Connectives](https://github.com/luyandamncube/UNISA/tree/master/year2/COS2661/ASS1/ASS1.txt)

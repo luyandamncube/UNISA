@@ -3,63 +3,61 @@
 #include "journalarticle.h"
 
 ReferenceList::~ReferenceList(){
-//    qDeleteAll(this);
     this->clear();
 }
 
 bool ReferenceList::addReference(Reference *r){
-//    int count = 0;
     for(Reference *temp : *this)
         if (temp->getRefID() == r->getRefID())
         {
-//            count++;
-//            qDebug() << "Match found 0" + QString::number(count) + "| " + temp->getRefID() + " | " +r->getRefID();
             return(false);
         }
-//        else {
-//            count++;
-//            qDebug() << "0" + QString::number(count) + "| " + temp->getRefID() + " | " +r->getRefID();
-//        }
-    if (r->getType() == "Conference"){
-        this->append(dynamic_cast<ConferencePaper*>(r));
-    }
+
+    this->append(r);
     return(true);
 }
 
 QString ReferenceList::generateReferences(QStringList ids, bool full){
     QString output = "";
-    for (int i = 0; i < ids.size();i++){
-            if(ids.contains(at(i)->getRefID(),Qt::CaseInsensitive) ){
+    //iterate through ReferenceList
+    for(Reference *r : *this)
+        //iterate through list of ID's in parameter
+        for (int i = 0; i < ids.size();i++){
+            if(!QString::compare(r->getRefID(), ids.at(i), Qt::CaseInsensitive)){
                 if(full){
-                    output += at(i)->toString();
-                }
+                    output += r->toString() + "\n";
+                 }
                 else{
-                    output += at(i)->toAPAStyle();
-                }
+                    output += r->toAPAStyle()+ "\n";
+                 }
+            }
         }
-    }
     return (output);
 }
 
 QStringList ReferenceList::getIDsByAuthor(QString au){
-    QStringList output;
-    for(Reference *r: *this)
-        if(r->getAuthors().contains(au,Qt::CaseInsensitive)){
-            output.append(r->getRefID());
+    QStringList ids;
+    for(int i = 0; i < size(); ++i){
+        for(int x = 0; x < at(i)->getAuthors().size(); x++){
+            if(QString::compare(at(i)->getAuthors().at(x), au, Qt::CaseInsensitive) == 0){
+                ids.append(at(i)->getRefID());
+            }
         }
-    return (output);
+    }
+    return ids;
 }
 
 QStringList ReferenceList::getIDsByConference(QString cn){
-    QStringList output;
-    for(Reference *c: *this)
-        //Run-time Type Identification (RTTI), cast to a specific type
-        if (QString::compare(dynamic_cast<ConferencePaper*>(c)->getConfName(),"Conference",Qt::CaseInsensitive)==0){
-            if (QString::compare(dynamic_cast<ConferencePaper*>(c)->getConfName(),cn,Qt::CaseInsensitive)==0){
-                output.append(c->getRefID());
+    QStringList ids;
+    for(int i = 0; i < size(); ++i){
+        if(QString::compare(at(i)->getType(),"Conference",Qt::CaseInsensitive) == 0){
+            ConferencePaper *c = (ConferencePaper*)at(i);
+            if(QString::compare(c->getConfName(), cn, Qt::CaseInsensitive) == 0){
+                ids.append(at(i)->getRefID());
             }
         }
-    return output;
+    }
+    return ids;
 }
 
 QStringList ReferenceList::getIDsByJournal(QString jn){

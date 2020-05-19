@@ -1,0 +1,10 @@
+Q01     (b + ab)(a + b)*			NUMBER 2.
+Q02                                             NUMBER 1. 
+Q03     0111110111				NUMBER 4.
+Q04                                             NUMBER 2. 
+Q05     					NUMBER 4.
+Q06     					NUMBER 3.
+Q07    						NUMBER 3.
+Q08     					NUMBER 4.
+Q09     		                        NUMBER 3.
+Q10    						NUMBER 3.
