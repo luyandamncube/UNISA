@@ -5,14 +5,20 @@
 
 ## Resources
 - [NESO Academy's](https://www.youtube.com/watch?v=58N2N7zJGrQ&list=PLBlnK6fEyqRgp46KUv4ZY69yXmpwKOIev) playlist on youtue was a great source for a crash course on this topic
-- [GraphViz](https://graphviz.gitlab.io/_pages/Download/Download_windows.html) provides a good tool for drawing Finite Automata:
+- [JFLAP](http://www.jflap.org/jflaptmp/) provides a way to quickly design, convert, minimise and test the output of FA. It is probably the most useful software in this course:
 
- <p align="center">
+<p align="center">
+  <img src="../../src/jflap.png"/>
+</p>
+
+- [GraphViz](https://graphviz.gitlab.io/_pages/Download/Download_windows.html) provides a good tool for drawing Finite Automata programatically:
+
+<p align="center">
   <img src="../../src/fa.png"/>
 </p>
 
 * [GraphViz Pocket Reference](https://graphs.grevian.org/example)  provides examples of the types of drawings you can do with GraphViz.
-* [](https://martin-thoma.com/how-to-draw-a-finite-state-machine/) shows examples of how to draw DFA and NFA
+* [martin-thoma.com](https://martin-thoma.com/how-to-draw-a-finite-state-machine/) shows examples of how to draw DFA and NFA
 
 ### Deterministic Finite Automata:
 
