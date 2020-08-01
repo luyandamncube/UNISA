@@ -36,7 +36,7 @@ A collection of modules I completed whilst finishing my Computer Science & Mathe
 - [ ] COS3711 - Advanced Programming 	Pre-requisite:COS2611 & COS2614
 - [ ] COS3721 - Operating Systems and Architecture 	Pre-requisite:COS2614
 - [ ] COS3751 - Techniques of Artificial Intelligence 	Pre-requisite:COS2611 & COS2661
-- [ ] COS3761 - Formal Logic III 	Pre-requisite:COS2661
+- [ ] [COS3761 - Formal Logic III 	Pre-requisite:COS2661](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3761)
 - [ ] MAT3701 - Linear Algebra III 	Pre-requisite:MAT2611
 - [ ] MAT3705 - Complex Analysis 	Pre-requisite:MAT2615
 - [ ] MAT3706 - Ordinary Differential Equations 	Pre-requisite:APM2611
