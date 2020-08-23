@@ -10,6 +10,9 @@
   <img src="../../src/desmos.png"/>
 </p>
 
+- This [derivative calculator](https://www.derivative-calculator.net/) can be used for quickly calculating derivatives
+- This [integral calculator](https://www.integral-calculator.com/) can be used for quickly calculating derivatives
+
 ### Assignment 1
 * Graphs of functions, rates of change, optimization, L’Hopital’s rule.
 
