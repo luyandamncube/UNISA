@@ -1,0 +1,20 @@
+Q01	Option 5.
+Q02	Option 4.
+Q03	Option 2.
+Q04	Option 3.
+Q05	Option 1.
+Q06	Option 5.
+Q07	Option 
+Q08	Option 
+
+p: Susan saves
+q: Susan buys a house
+r: The house has seven bedrooms
+
+If susan saves, then 
+~p -> (~q & r) 
+
+
+
+
+
