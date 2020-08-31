@@ -9,12 +9,12 @@ Q08	Option 1.
 Q09	Option 2.
 Q10	Option 2.
 Q11	Option 4.
-Q12	Option 
-Q13	Option 
-Q14	Option 
-Q15	Option 
-Q16	Option 
-Q17	Option 
-Q18	Option 
-Q19	Option 
-Q20	Option 
+Q12	Option 3.
+Q13	Option 1.
+Q14	Option 4.
+Q15	Option 3.
+Q16	Option 4.
+Q17	Option 2.
+Q18	Option 3.
+Q19	Option 5.
+Q20	Option 4.
