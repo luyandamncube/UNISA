@@ -4,17 +4,17 @@ Q03	Option 2.
 Q04	Option 3.
 Q05	Option 1.
 Q06	Option 5.
-Q07	Option 
-Q08	Option 
-
-p: Susan saves
-q: Susan buys a house
-r: The house has seven bedrooms
-
-If susan saves, then 
-~p -> (~q & r) 
-
-
-
-
-
+Q07	Option 4. 
+Q08	Option 1.
+Q09	Option 2.
+Q10	Option 2.
+Q11	Option 4.
+Q12	Option 
+Q13	Option 
+Q14	Option 
+Q15	Option 
+Q16	Option 
+Q17	Option 
+Q18	Option 
+Q19	Option 
+Q20	Option 
