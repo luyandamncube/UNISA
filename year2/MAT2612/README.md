@@ -13,10 +13,10 @@
 - [Trefor Bazett](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS) provides a great playlist for discrete mathematics including revision for this subject
 
 ### Assignment 1
-* [Boolean Matrix Operations, Mathematical Induction, Combinatorics, Permuatations, Relations](https://github.com/luyandamncube/UNISA/tree/master/year2/MAT2612/ASS1/ASS1.txt)
+* [Boolean Matrix Operations, Mathematical Induction, Combinatorics, Permuatations, Relations](https://github.com/luyandamncube/UNISA/blob/master/year2/MAT2612/ASS1/ASS1.pdf)
 
 ### Assignment 2
-* [Functions, Order Relations and Structures, Hasse Diagrams, Karnaugh maps](https://github.com/luyandamncube/UNISA/tree/master/year2/MAT2612/ASS2/ASS2.docx)
+* [Functions, Order Relations and Structures, Hasse Diagrams, Karnaugh maps](https://github.com/luyandamncube/UNISA/blob/master/year2/MAT2612/ASS2/ASS2.pdf)
 
 ### Exam
 - All the above concepts tested
