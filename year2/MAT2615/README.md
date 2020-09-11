@@ -4,12 +4,13 @@
 - This was a module I completed while studying at the University of South Africa.
 - [P. Danziger](https://math.ryerson.ca/~danziger/professor/MTH141/Handouts/vectors.pdf) has a great handout explaining vectors in Rn
 - [Desmos](https://www.desmos.com/calculator/ksjcpazwa9) provides the ability to graph parametric equations
+-[Krista King](https://www.youtube.com/playlist?list=PLJ8OrXpbC-BM2TBMW9g--nTY-sG-SSAZC) has an excellent playlist that goes through the logic/syntax and examples for this subject 
 
 ### Assignment 1
-* [Basic Concepts, Limits, Continuity and Differentiation Applications of Derivatives](https://github.com/luyandamncube/UNISA/tree/master/year2/MAT2615/ASS1/ASS2.docx)
+* [Vectors & Planes in Rn, Parametric Equations, Quadric Surfaces, Partial Differentiation, Epsilon-Delta definition](https://github.com/luyandamncube/UNISA/tree/master/year2/MAT2615/ASS1/ASS1.pdf)
 
 ### Assignment 2
-* [Applications of Derivatives,Integration](https://github.com/luyandamncube/UNISA/tree/master/year2/MAT2615/ASS2/ASS2.docx)
+* [Applications of Derivatives,Integration](https://github.com/luyandamncube/UNISA/tree/master/year2/MAT2615/ASS2/ASS2.pdf)
 
 ### Exam
 - All the above concepts tested
