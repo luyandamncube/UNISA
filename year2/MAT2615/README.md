@@ -12,5 +12,14 @@
 ### Assignment 2
 * [Applications of Derivatives,Integration](https://github.com/luyandamncube/UNISA/tree/master/year2/MAT2615/ASS2/ASS2.pdf)
 
+### TODO (finish these notes before exam)
+- Parameterizing a curve C
+- Parametric Equations of Parabolas
+- Optimization (Using Language multipliers)
+- Regions (Type I, Type II)
+
+
+
+
 ### Exam
 - All the above concepts tested
