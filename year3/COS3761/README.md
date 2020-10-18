@@ -13,8 +13,8 @@
 ### Assignment 2
 * [Predicate Logic, Natural Deduction, Parse Trees, Formulas ](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3761/ASS2/ASS2.pdf)
 
-### Assignment 1
-* [Kripke models, Modal Logic, Formula Schemes, Proof Strategies](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3761/ASS1/ASS3.txt)
+### Assignment 3
+* [Kripke models, Modal Logic, Formula Schemes, Proof Strategies](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3761/ASS2/ASS3.txt)
 
 ### Exam
 - All the above concepts tested
