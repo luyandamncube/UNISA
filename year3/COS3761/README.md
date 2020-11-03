@@ -6,6 +6,7 @@
 - [Natural Deduction](http://teachinglogic.liglab.fr/DN/index.php) is a great tool for doing Natural Deduction quickly
 - [Cheat Sheet](https://www.cosc.brocku.ca/~mwinter/Courses/4P42/CheatSheet.pdf) is a great summmary for Natural deduction rules
 - [Truth table generator](https://web.stanford.edu/class/cs103/tools/truth-table-tool/) is a great tool for doing truth tables online
+- [Kane B](https://www.youtube.com/watch?v=EaCLZ9OZzAg&list=PLXKKIUdnOESGk43pUg3NTkRWjglvKXKi7) playlist on Modal Logic
 
 ### Assignment 1
 * [Propositional Logic, Natural Deduction, Parse Trees](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3761/ASS1/ASS1.txt)
