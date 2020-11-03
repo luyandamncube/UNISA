@@ -4,7 +4,7 @@
 - This was a module I completed while studying at the University of South Africa.
 - [Trefor Bazett](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxfT9RMcReZ4WcoVILP4k6-m) has a great Calculus I playlist to revise concepts from this subjects pre-requisite, MAT1512
 - [Trefor Bazett](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxc4ySKTIW19TLrT91Ik9M4n) also has a great Calculus II playlist for this topic
--[WolframAlpha](https://www.wolframalpha.com/) is great calculator for integrals, limits, derivatives
+- [WolframAlpha](https://www.wolframalpha.com/) is great calculator for integrals, limits, derivatives
 - [Desmos](https://www.desmos.com/calculator) provides a great graphing tool. For example, graphing for a piecewise function:
 
 <p align="center">
