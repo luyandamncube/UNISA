@@ -6,7 +6,7 @@
 - [Natural Deduction](http://teachinglogic.liglab.fr/DN/index.php) is a great tool for doing Natural Deduction quickly
 - [Cheat Sheet](https://www.cosc.brocku.ca/~mwinter/Courses/4P42/CheatSheet.pdf) is a great summmary for Natural deduction rules
 - [Truth table generator](https://mrieppel.net/prog/truthtable.html) is a great tool for doing truth tables online. With this truth table generator you can enter multiple formulas:
-example: show that the following sequent is valid by giving and appropriate valuation
+- example: show that the following sequent is valid by giving and appropriate valuation
 
 <img src="https://render.githubusercontent.com/render/math?math=((\neg p \vee \neg q) \vee r , q \vee r , p \vdash \neg r)">
 
