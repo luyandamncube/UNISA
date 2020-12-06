@@ -4,6 +4,7 @@
 - This was a module I completed while studying at the University of South Africa.
 - [COS2661 Formal Logic II](https://github.com/luyandamncube/UNISA/tree/master/year2/COS2661) is a great subject to complete before this one as most of it's syllabus (Logical Statements/Arguments, Logical Possibility, Truth Tables, Conditional Statements, Quantifiers, Rules of Inference) is revision for MAT2612
 - [madebyevan](http://madebyevan.com/fsm/) is a great tool for drawing diagraphs quickly in this subject
+- The [Mississippi counting problem](https://medium.com/i-math/can-you-solve-the-mississippi-problem-6c0f3b02531) (Multinomial theory) is a big section in Counting in this subject. Make sure you understand this THOUROUGHLY. Otherwise, the questions where you need to arrange words/digits will seem abastract.
 
 # Resources 
 - Counting (Kimberly Brehm) - https://www.youtube.com/watch?v=eEDCPR67jqU
