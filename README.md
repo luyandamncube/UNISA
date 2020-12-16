@@ -27,7 +27,7 @@ A collection of modules I completed whilst finishing my Computer Science & Mathe
 - [ ] MAT2611 - Linear Algebra 2 	Pre-requisite:MAT1503
 - [ ] [MAT2612 - Introduction to Discrete Mathematics 	Pre-requisite:COS1501 or MAT1512 or MAT1503](https://github.com/luyandamncube/UNISA/tree/master/year2/MAT2612)
 - [ ] MAT2613 - Real Analysis I 	Pre-requisite:MAT1613
-- [ ] [MAT2615 - Calculus in Higher Dimensions 	Pre-requisite:MAT1512 or MAT1503](https://github.com/luyandamncube/UNISA/tree/master/year2/MAT2615)
+- [x] [MAT2615 - Calculus in Higher Dimensions 	Pre-requisite:MAT1512 or MAT1503](https://github.com/luyandamncube/UNISA/tree/master/year2/MAT2615)
 - [ ] PLS2607 - Philosophy of Science
 
 ## Third Year
