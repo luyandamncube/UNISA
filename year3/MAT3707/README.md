@@ -7,7 +7,7 @@
 
 ## Resources
 - [Wrath of Math](https://www.youtube.com/playlist?list=PLztBpqftvzxXBhbYxoaZJmnZF6AUQr1mH) has a great playlist on Graph Theory
-- [JFLAP](http://www.jflap.org/jflaptmp/) provides a way to quickly design graphs
+- [csacademy](https://csacademy.com/app/graph_editor/) provides a way to quickly design graphs
 
 ### Assignment 1
 
