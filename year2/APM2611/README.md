@@ -7,7 +7,7 @@
 - Again, practice and revise all the methods of  Differentiation + Integration thoroughly. They are used in depth for solving DE's
 
 ## PDE's 
-- It was helpful to have done [MAT2615 Calculus in higher dimensions](https://github.com/luyandamncube/UNISA/tree/master/year2/MA2615) before this. Topics that helped with PDE's included partial differentiation, gradient vectors and methods of legrange.
+- It was helpful to have done [MAT2615 Calculus in higher dimensions](https://github.com/luyandamncube/UNISA/tree/master/year2/MAT2615) before this. Topics that helped with PDE's included partial differentiation, gradient vectors and methods of legrange.
 - [Standford](https://web.stanford.edu/class/math220a/handouts/firstorder.pdf) has a great handout to understand PDE's
 
 ## ODE's
