@@ -33,7 +33,6 @@ def sor_solver(A, b, omega, initial_guess, convergence_criteria):
     phi = initial_guess[:]
     residual = np.linalg.norm(np.matmul(A, phi) - b)  # Initial residual
     while residual > convergence_criteria:
-
         print(f"iteration {step +1 } : {seperator}")
         for i in range(A.shape[0]):
             sigma = 0
@@ -41,9 +40,10 @@ def sor_solver(A, b, omega, initial_guess, convergence_criteria):
             for j in range(A.shape[1]):
                 if j != i:
                     sigma += A[i, j] * phi[j]
+            temp = phi[i]    
             phi[i] = (1 - omega) * phi[i] + (omega / A[i, i]) * (b[i] - sigma)
-
-            print(f"x_{i+1} = (1 - {omega}) × ??? + ({omega} / {A[i, i]})[{b[i]} - {A[i][num_arr[0]]} × {round(phi[num_arr[0]],5)} -{A[i][num_arr[1]]} × {round(phi[num_arr[1]],5)}- {A[i][num_arr[2]]} × {round(phi[num_arr[2]],5)}] = {round(phi[i],5)}") 
+            print(f"x_{i+1} = (1 - {omega}) × {temp} + ({omega}/{A[i, i]})[{b[i]} - {A[i][num_arr[0]]} × {round(phi[num_arr[0]],5)} -{A[i][num_arr[1]]} × {round(phi[num_arr[1]],5)}- {A[i][num_arr[2]]} × {round(phi[num_arr[2]],5)}] = {round(phi[i],5)}") 
+            
             num_arr.append(i)
             num_arr.sort()        
         residual = np.linalg.norm(np.matmul(A, phi) - b)
