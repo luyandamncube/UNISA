@@ -42,7 +42,7 @@ def sor_solver(A, b, omega, initial_guess, convergence_criteria):
                     sigma += A[i, j] * phi[j]
             temp = phi[i]    
             phi[i] = (1 - omega) * phi[i] + (omega / A[i, i]) * (b[i] - sigma)
-            print(f"x_{i+1} = (1 - {omega}) × {temp} + ({omega}/{A[i, i]})[{b[i]} - {A[i][num_arr[0]]} × {round(phi[num_arr[0]],5)} -{A[i][num_arr[1]]} × {round(phi[num_arr[1]],5)}- {A[i][num_arr[2]]} × {round(phi[num_arr[2]],5)}] = {round(phi[i],5)}") 
+            print(f"x_{i+1} = (1 - {omega}) × {round(temp,5)} + ({omega}/{A[i, i]})[{b[i]} - {A[i][num_arr[0]]} × {round(phi[num_arr[0]],5)} -{A[i][num_arr[1]]} × {round(phi[num_arr[1]],5)}- {A[i][num_arr[2]]} × {round(phi[num_arr[2]],5)}] = {round(phi[i],5)}") 
             
             num_arr.append(i)
             num_arr.sort()        
@@ -54,18 +54,18 @@ def sor_solver(A, b, omega, initial_guess, convergence_criteria):
 
 def getInputA():    
     # initialize the matrix
-    # a = np.array([
-    #     [0.05, 0.07, 0.06, 0.05],
-    #     [0.07, 0.10, 0.08, 0.07],
-    #     [0.06, 0.08, 0.10, 0.09],
-    #     [0.05, 0.07, 0.09, 0.10],
-    # ], dtype=float)
     a = np.array([
-        [0.06, 0.08, 0.07, 0.08],
-        [0.08, 0.20, 0.09, 0.07],
-        [0.07, 0.09, 0.20, 0.10],
-        [0.06, 0.08, 0.10, 0.20],
+        [0.05, 0.07, 0.06, 0.05],
+        [0.07, 0.10, 0.08, 0.07],
+        [0.06, 0.08, 0.10, 0.09],
+        [0.05, 0.07, 0.09, 0.10],
     ], dtype=float)
+    # a = np.array([
+    #     [0.06, 0.08, 0.07, 0.08],
+    #     [0.08, 0.20, 0.09, 0.07],
+    #     [0.07, 0.09, 0.20, 0.10],
+    #     [0.06, 0.08, 0.10, 0.20],
+    # ], dtype=float)
     # a = np.array([
     #     [2.141, -2.718, 1.414, -1.732],
     #     [9.869, 2.718, -7.389, 0.428],
@@ -76,9 +76,9 @@ def getInputA():
 
 def getInputB():
     # initialize the RHS vector
-    # b = np.array([0.23, 0.32, 0.33, 0.31], dtype=float)
+    b = np.array([0.23, 0.32, 0.33, 0.31], dtype=float)
     # b = np.array([3.316, 0 , 3.141, 1.414], dtype=float)
-    b = np.array([0.29, 0.44, 0.46, 0.44], dtype=float)
+    # b = np.array([0.29, 0.44, 0.46, 0.44], dtype=float)
     return b
 
 
