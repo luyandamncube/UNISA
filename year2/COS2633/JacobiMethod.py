@@ -44,7 +44,7 @@ def jacobiMethod(A, b):
     for it_count in range(ITERATION_LIMIT):
         if it_count != 0:
             print(seperator)
-            print(f"Iteration {it_count}: {x}\n")
+            print(f"Iteration {it_count}:\n")
         x_new = np.zeros_like(x)
         
         ans_arr.append(x)

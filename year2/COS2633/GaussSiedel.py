@@ -9,7 +9,6 @@ ITERATION_LIMIT = 25
 seperator = '-----------------------------------------------------'
 # CHANGE THIS FOR 3 DIGITS
 num_arr = [0,1,2,3]
-temp_arr = []
 
 def printArray(A, b, precision):
     Ab=np.array([np.array(xi) for xi in A])
