@@ -22,12 +22,17 @@ def printArray(A, b, precision):
     print(df)
 
 def getInputA(b=None):    
-    A=np.array([
-        [0.05, 0.07, 0.06, 0.05],
-        [0.07, 0.10, 0.08, 0.07],
-        [0.06, 0.08, 0.10, 0.09],
-        [0.05, 0.07, 0.09, 0.10],
+    A = np.array([
+        [4.63, -1.21, 3.22],
+        [-3.07, 5.48, 2.11],
+        [1.26, 3.11, 4.57],
     ], dtype=float)
+    #     A=np.array([
+    #     [0.05, 0.07, 0.06, 0.05],
+    #     [0.07, 0.10, 0.08, 0.07],
+    #     [0.06, 0.08, 0.10, 0.09],
+    #     [0.05, 0.07, 0.09, 0.10],
+    # ], dtype=float)
     
     Ab=[]
     if len(b) != 0:
@@ -38,7 +43,8 @@ def getInputA(b=None):
 
 def getInputB():
     # initialize the RHS vector
-    b = np.array([0.23, 0.32, 0.33, 0.31])
+    # b = np.array([0.23, 0.32, 0.33, 0.31])
+    b = np.array([2.22, -3.17,5.11], dtype=float)
     return b
 
 def getRowsColumns(Ab):
