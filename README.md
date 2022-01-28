@@ -34,7 +34,7 @@ A collection of modules I completed whilst finishing my Computer Science & Mathe
 - [ ] APM3711 - Numerical Methods II 	Pre-requisite:COS2633
 - [ ] COS3701 - Theoretical Computer Science III 	Pre-requisite:COS2601
 - [ ] [COS3711 - Advanced Programming 	Pre-requisite:COS2611 & COS2614](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3711)
-- [ ] [COS3721 - Operating Systems and Architecture 	Pre-requisite:COS2614](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3721)
+- [x] [COS3721 - Operating Systems and Architecture 	Pre-requisite:COS2614](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3721)
 - [x] [COS3751 - Techniques of Artificial Intelligence 	Pre-requisite:COS2611 & COS2661](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3751)
 - [x] [COS3761 - Formal Logic III 	Pre-requisite:COS2661](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3761)
 - [ ] MAT3701 - Linear Algebra III 	Pre-requisite:MAT2611
