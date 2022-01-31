@@ -3,12 +3,14 @@ import pandas as pd
 import numpy as np
 
 # CHANGE THIS FOR 3 DIGITS
-x = [0.00, 0.00, 0.00, 0.00]  # [0.00, 0.00, 0.00]
+x = [0.00, 0.00, 0.00, 0.00]  
+# x=[0.00, 0.00, 0.00]
 
 ITERATION_LIMIT = 25
 SEPERATOR = '-----------------------------------------------------'
 # CHANGE THIS FOR 3 DIGITS
-num_arr = [0,1,2,3] # num_arr = [0,1,2]
+num_arr = [0,1,2,3] 
+# num_arr = [0,1,2]
 
 def printArray(A, b, precision):
     # print(f"A{A}  b{b}    precision{precision}")
@@ -30,8 +32,8 @@ def seidel(a, x ,b):
         print(f"iteration {i+1}: {SEPERATOR}")   
         for j in range(0, n):        
             d = b[j] 
-            # ADD THIS IN FOR 3 DIGITS ??
-            num_arr.remove(j)  
+            # REMOVE THIS IN FOR 3 DIGITS 
+            num_arr.remove(j)     
             for k in range(0, n):  
                 # print(k)
                 if(j != k):
