@@ -3,14 +3,14 @@ import pandas as pd
 import numpy as np
 
 # CHANGE THIS FOR 3 DIGITS
-x = [0.00, 0.00, 0.00, 0.00]  
-# x=[0.00, 0.00, 0.00]
+#x = [0.00, 0.00, 0.00, 0.00]  # 
+x=[1.00, 1.00, 1.00]
 
 ITERATION_LIMIT = 25
 SEPERATOR = '-----------------------------------------------------'
 # CHANGE THIS FOR 3 DIGITS
-num_arr = [0,1,2,3] 
-# num_arr = [0,1,2]
+#num_arr = [0,1,2,3] # 
+num_arr = [0,1,2]
 
 def printArray(A, b, precision):
     # print(f"A{A}  b{b}    precision{precision}")
@@ -33,7 +33,7 @@ def seidel(a, x ,b):
         for j in range(0, n):        
             d = b[j] 
             # REMOVE THIS IN FOR 3 DIGITS 
-            num_arr.remove(j)     
+            # num_arr.remove(j)     
             for k in range(0, n):  
                 # print(k)
                 if(j != k):
@@ -41,8 +41,8 @@ def seidel(a, x ,b):
             x[j] = d / a[j][j]
             temp = b[j]
             # ADD THIS IN FOR 3 DIGITS
-            # if (j == 1 and i > 0):
-            #     temp = x[0]
+            if (j == 1 and i > 0):
+                temp = x[0]
             print(f"x_{j+1} = 1/{a[j][j]} x ( {round(temp,5)} - {a[j][num_arr[0]]} x {round(x[num_arr[0]],5)} - {a[j][num_arr[1]]} x {round(x[num_arr[1]],5)} - {a[j][num_arr[2]]} x {round(x[num_arr[2]],5)}) = {round(x[j],5)}")   
             num_arr.append(j)
             num_arr.sort()        
@@ -56,12 +56,17 @@ def getInputA():
     #     [-3.07, 5.48, 2.11],
     #     [1.26, 3.11, 4.57],
     # ], dtype=float)
-    a=np.array([
-        [0.05, 0.07, 0.06, 0.05],
-        [0.07, 0.10, 0.08, 0.07],
-        [0.06, 0.08, 0.10, 0.09],
-        [0.05, 0.07, 0.09, 0.10],
+    a = np.array([
+        [6,1,1],
+        [2,4,0],
+        [1,2,6],
     ], dtype=float)
+    # a=np.array([
+    #     [0.05, 0.07, 0.06, 0.05],
+    #     [0.07, 0.10, 0.08, 0.07],
+    #     [0.06, 0.08, 0.10, 0.09],
+    #     [0.05, 0.07, 0.09, 0.10],
+    # ], dtype=float)
 
     return a
 
@@ -69,7 +74,8 @@ def getInputB():
     # initialize the RHS vector
     # CHANGE THIS FOR 3 DIGITS
     # b = np.array([2.22, -3.17,5.11], dtype=float)
-    b = np.array([0.23, 0.32, 0.33, 0.31])
+    b = np.array([5,-6,3], dtype=float)
+    # b = np.array([0.23, 0.32, 0.33, 0.31])
     return b
 
 if __name__ == "__main__":
