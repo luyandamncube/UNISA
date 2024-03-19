@@ -1,6 +1,6 @@
 # UNISA
 
-## COS2633 - Numerical methods
+## COS2633/APM2613 - Numerical methods
 - This was a module I completed while studying at the University of South Africa.
 
 ### Syllabus 
