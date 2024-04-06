@@ -27,6 +27,41 @@ octave --gui
 octave
 ```
 
+## How to use Octave on Mac (terminal)
+```
+octave some_octave_script.m
+```
+
+
+## Some examples
+```
+% Display 
+disp ("The value of pi is:"), disp (pi)
+    -| the value of pi is:
+    -| 3.1416
+
+#{
+  Let A be the matrix:
+  A =
+  	1	2
+  	3	4
+  	5	6
+#}
+A = [1 2; 3 4; 5 6]
+
+% Define a function
+function A = fn_arearect(x,y)
+    % A is the area
+    % x is the width of rectangle
+    % y is the height of rectangle
+    
+    A = x * y;
+end
+
+% Invoke a function
+result = fn_arearect(3,5);
+```
+
 ### Syllabus 
 From the prescribed book, Numerical Analysis (Richard L. Burden, Douglas J. Faires, Annette M. Burden), this would be the recommended order to complete the syllabus in:
 
