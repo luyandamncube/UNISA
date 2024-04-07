@@ -75,7 +75,8 @@ C2: Solutions of Equations in One Variable
 
 C10: Newton’s Method for Nonlinear Systems of Equations 
 
-- 10.1 Fixed Points for Functions of Several Variables 642 10.2 Newton's Method 
+- 10.1 Fixed Points for Functions of Several Variables
+- 10.2 Newton's Method 
 - 10.3 Quasi-Newton Methods 
 - 10.4 Steepest Descent Techniques
 - 10.5 Homotopy and Continuation Methods 
