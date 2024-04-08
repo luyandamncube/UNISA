@@ -4,6 +4,12 @@ function root = bisection_method(f, a, b, tol, max_iter)
     % tol: tolerance (stopping criterion)
     % max_iter: maximum number of iterations
     
+    printf("f:\t\t %s\n", argv(){1});
+    printf("a:\t\t %s\n", argv(){2});
+    printf("b:\t\t %s\n", argv(){3});
+    printf("tol:\t\t %s\n", argv(){4});
+    printf("max_iter:\t %s\n", argv(){5});
+    printf("\n");
     % Check if the function changes sign within the interval
     if f(a) * f(b) >= 0
         error('Function does not change sign within the interval');
@@ -90,11 +96,6 @@ end
 if nargin != 5
     printf("Usage: octave 000_bisection.m <function_definition> <a> <b> <tol> <max_iter>\n");
     printf("Example: octave 000_bisection.m '3*x^3 - 10*x^2 + 13/4 + 15/2' 0 2 1e-6 100\n");
-    printf("arg1:  %s\n", argv(){1});
-    printf("arg2:  %s\n", argv(){2});
-    printf("arg3:  %s\n", argv(){3});
-    printf("arg4:  %s\n", argv(){4});
-    printf("arg5:  %s\n", argv(){5});
     return;
 end
 
