@@ -73,8 +73,8 @@ end
 
 % Parse command-line arguments
 if nargin != 5
-    printf("Usage: octave 000_bisection.m func func_derivative initial_guess tolerance max_iterations\n");
-    printf("Example: octave 000_bisection.m '3*x^3 - 10*x^2 + 13/4 + 15/2' 0 2 1e-6 100\n");
+    printf("Usage: octave 001_newton_raphson.m func func_derivative initial_guess tolerance max_iterations\n");
+    printf("Example: octave 001_newton_raphson.m '3*x^3 - 10*x^2 + 13/4 + 15/2' 0 2 1e-6 100\n");
     return;
 endif
 

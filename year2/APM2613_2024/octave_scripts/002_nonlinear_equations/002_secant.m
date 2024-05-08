@@ -28,7 +28,14 @@ function [solution,no_iterations] = secant(f, x0, x1, tolerance)
     f_x1 = f(x1);
     iteration_counter = 0;
     while abs(f_x1) > tolerance && iteration_counter < 100
+        if iteration_counter == 0
+            printf("-------------------------------------------------------- iter: %d\n",iteration_counter);
+            printf("[1] Find points x_0 and x_1 such that x_0<x_1 and f(x_0)⋅f(x_1)<0\n");
+        end
         try
+            if iteration_counter == 0
+                printf("[2] find next value x_0 using formula:\n");
+            end
             denominator = (f_x1 - f_x0)/(x1 - x0);
             x = x1 - (f_x1)/denominator;
         catch
@@ -39,6 +46,12 @@ function [solution,no_iterations] = secant(f, x0, x1, tolerance)
         x1 = x;
         f_x0 = f_x1;
         f_x1 = f(x1);
+        if iteration_counter == 0
+            printf("[3] Evaluate f(c):\n")
+            printf("\tif f(x_2 )=0 then x_2 is an exact root\n")
+            printf("\telse b=x_0\n")
+            printf("\tand a=x_0\n")
+        end
         iteration_counter = iteration_counter + 1;
     end
     % Here, either a solution is found, or too many iterations
