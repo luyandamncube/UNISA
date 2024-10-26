@@ -20,7 +20,7 @@ function gaussian_elimination_scaled_partial_pivoting()
     % Forward elimination with scaled partial pivoting
     for i = 1:n-1
         % Compute scaling factors
-        scale = max(abs(A(i:n, 1:n)), [], 2);
+        scale = max(abs(A(1:n, 1:n)), [], 2);  % Maximum absolute values in each row
         scale(scale == 0) = 1;  % Prevent division by zero
 
         % Find the pivot row based on the scaled values
