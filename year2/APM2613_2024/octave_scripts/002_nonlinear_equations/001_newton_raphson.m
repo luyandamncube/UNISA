@@ -1,81 +1,73 @@
-function newtons_method()
-    % Convert command-line arguments to functions
-    func_str = argv(){1};
-    func_derivative_str = argv(){2};
-    func = str2func(['@(x)' func_str]);
-    func_derivative = str2func(['@(x)' func_derivative_str]);
+function newton_raphson_method()
 
-    % Convert other command-line arguments to numerical values
-    initial_guess = str2double(argv(){3});
-    tolerance = str2double(argv(){4});
-    max_iterations = str2double(argv(){5});
+    % Parse command line arguments
+    % if nargin != 5
+    %     printf("Usage: octave 001_newton_raphson.m <function_definition> <derivative_definition> <initial_guess> <tol> <max_iterations>\n");
+    %     printf("Example: octave 001_newton_raphson.m '3*x^3 - 10*x^2 + 13/4 + 15/2' '9*x^2 - 20*x' 1 1e-6 100\n");
+    %     return;
+    % end
 
-    % Call the Newton's method function to find the root
-    [solution,no_iterations] = newtons(func, func_derivative, initial_guess, tolerance, max_iterations);
+    % Convert input arguments to numerical values
+    f_str = argv(){1};
+    df_str = argv(){2};  % Derivative function
+    x0 = str2num(argv(){3});
+    tol = str2num(argv(){4});
+    max_iterations = str2num(argv(){5});
 
-    if no_iterations > 0   % Solution found
-        printf("[5] Repeat steps 3-4 until convergence, stop\n");
-        printf("\tno. of iterations: %d\n",no_iterations+1);
-        printf("\n");
-        fprintf('A solution is: %f\n', solution)
-    else
-        fprintf('Abort execution.\n')
-    end
-end
+    % Define the function f(x) and its derivative f'(x) using the input strings
+    f = str2func(['@(x)' f_str]);
+    df = str2func(['@(x)' df_str]);
 
-function [solution,no_iterations] = newtons(func, func_derivative, initial_guess, tolerance, max_iterations)
-    printf("f:\t\t\t %s\n", argv(){1});
-    printf("f_derivative:\t\t %s\n", argv(){2});
-    printf("initial_guess:\t\t %s\n", argv(){3});
-    printf("tolerance:\t\t %s\n", argv(){4});
-    printf("max_iterations:\t\t %s\n", argv(){5});
-    printf("\n");
-    % Initialize variables
-    x = initial_guess;
+    % Initialize iteration counter
     iter = 0;
-    
-    % Iterate until convergence or maximum iterations reached
-    while iter < max_iterations
-        printf("-------------------------------------------------------- iter: %d\n",iter)
-        printf("[2] Calculate the midpoint:\n");
-        printf("\tx_0 = %d\n",x);
-        % Evaluate function and its derivative at current guess
-        fx = func(x);
-        fx_derivative = func_derivative(x);
-        
-        printf("[3] Evaluate f(c) & f'(c)\n");
-        printf("\tf(x_0):\t\t%d \n", fx);
-        printf("\tf'(x_0):\t%d \n", fx_derivative);
-        % Update guess using Newton's method formula
-        x = x - fx / fx_derivative;
-        printf("\tx_1:\t\t%d \n", x);
 
-        printf("[4] Evaluate f(c)\n");
-        printf("\tif f(x_0) then x_0 is an exact root\n");
+    % Debugging output for initial values
+    printf("f:\t\t %s\n", f_str);
+    printf("f'(x):\t\t %s\n", df_str);
+    printf("Initial guess:\tx0 = %f\n", x0);
+    printf("Tolerance:\t %e\n", tol);
+    printf("Max iterations:\t %d\n\n", max_iterations);
+
+    % Newton-Raphson Iteration
+    while iter < max_iterations
+        % Evaluate function and its derivative at current guess
+        fx0 = f(x0);
+        dfx0 = df(x0);
+
+        % Check for division by zero
+        if abs(dfx0) < eps
+            error('Derivative is too close to zero. Method may fail.');
+        end
+
+        % Calculate the next approximation
+        x1 = x0 - fx0 / dfx0;
+
+        % Debugging output
+        printf("--------------------------------------------------------\n");
+        printf("Iteration: %d\n", iter + 1);
+        printf("f(x0) = %f, f'(x0) = %f\n", fx0, dfx0);
+        printf("Next approximation: x1 = %f\n", x1);
+
         % Check for convergence
-        if abs(fx) < tolerance
-            solution = x;
-            no_iterations = iter;
+        if abs(x1 - x0) < tol
+            fprintf('Converged to root: %f after %d iterations\n', x1, iter + 1);
             return;
         end
-        % Increment iteration count
+
+        % Update guess for the next iteration
+        x0 = x1;
+
+        % Increment iteration counter
         iter = iter + 1;
     end
-    % If maximum iterations reached without convergence
-    if iter == max_iterations
-        warning('Maximum number of iterations reached without convergence');
-        solution = NaN;
-        no_iterations = iter;
-    end
-    no_iterations = iter;
 
+    % Final output
+    if iter == max_iterations
+        fprintf('Maximum number of iterations reached without convergence.\n');
+    else
+        fprintf('Final approximation: %f after %d iterations\n', x1, iter);
+    end
 end
 
-% Parse command-line arguments
-if nargin != 5
-    printf("Usage: octave 001_newton_raphson.m func func_derivative initial_guess tolerance max_iterations\n");
-    printf("Example: octave 001_newton_raphson.m '3*x^3 - 10*x^2 + 13/4 + 15/2' 0 2 1e-6 100\n");
-    return;
-endif
-
-newtons_method()
+% % Uncomment the following line if you want to execute the method directly
+newton_raphson_method()

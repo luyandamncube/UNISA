@@ -1,5 +1,18 @@
 function bisection_method()
 
+    % Parse command line arguments
+    % if nargin != 5
+    %     printf("Usage: octave 000_bisection.m <function_definition> <a> <b> <tol> <max_iterations>\n");
+    %     printf("Example: octave 000_bisection.m '3*x^3 - 10*x^2 + 13/4 + 15/2' 0 2 1e-6 100\n");
+    %     return;
+    % end
+
+    printf("f:\t\t %s\n", argv(){1});
+    printf("a:\t\t %s\n", argv(){2});
+    printf("b:\t\t %s\n", argv(){3});
+    printf("tol:\t\t %s\n", argv(){4});
+    printf("max_iterations:\t\t %s\n\n", argv(){5});
+
     % Convert input arguments to numerical values
     f_str = argv(){1};
     a = str2num(argv(){2});
@@ -10,119 +23,68 @@ function bisection_method()
     % Define the function f(x) using the input string
     f = str2func(['@(x)' f_str]);
 
-    % Call the bisection method function to find the root
-    [solution,no_iterations] = bisection(f, a, b, tol, max_iterations);
+    % Initialize iteration counter
+    iter = 0;
 
-    % % Display the root
-    % disp(['Root found using bisection method: ', num2str(root)]);
-
-    if no_iterations > 0   % Solution found
-        printf("[4] Repeat steps 2-3 until convergence, stop\n");
-        printf("\tno. of iterations: %d\n",no_iterations+1);
-        printf("\n");
-        fprintf('A solution is: %f\n', solution)
-    else
-        fprintf('Abort execution.\n')
-    end
-end
-
-function [solution,no_iterations] = bisection(f, a, b, tol, max_iterations)
-    % f: function handle representing the function
-    % a, b: initial interval [a, b]
-    % tol: tolerance (stopping criterion)
-    % max_iterations: maximum number of iterations
-    
-    printf("f:\t\t %s\n", argv(){1});
-    printf("a:\t\t %s\n", argv(){2});
-    printf("b:\t\t %s\n", argv(){3});
-    printf("tol:\t\t %s\n", argv(){4});
-    printf("max_iterations:\t %s\n", argv(){5});
-    printf("\n");
     % Check if the function changes sign within the interval
     if f(a) * f(b) >= 0
         error('Function does not change sign within the interval');
     else
         printf("[1] Initialize the interval [a,b]\n");
-        printf("\tfunction changes sign within the interval\n");
-        printf("\tf(a): %d \n", f(a));
-        printf("\tf(b): %d \n", f(b));
+        printf("\tFunction changes sign within the interval\n");
+        printf("\tf(a): %f \n", f(a));
+        printf("\tf(b): %f \n", f(b));
         printf("\n");
     end
-    
-    % Initialize iteration counter and interval width
-    iter = 0;
+
+    % Initialize the error and width of the interval
     width = b - a;
-    
+
     % Iterate until convergence or max_iterations reached
     while width > tol && iter < max_iterations
-        
         % Compute midpoint of the interval
         c = (a + b) / 2;
-        if iter == 0
-            printf("-------------------------------------------------------- iter: %d\n",iter)
-            printf("[2] Calculate the midpoint:\n");
-            printf("\tc=(a+b)/2 = %d\n",c);
-            printf("\n");
-        end
+
+        % Debugging output
+        printf("--------------------------------------------------------\n");
+        printf("Iteration: %d\n", iter + 1);
+        printf("[2] Calculate the midpoint:\n");
+        printf("\tc = (a + b) / 2 = %f\n", c);
+        
+        % Evaluate function at midpoint
+        fc = f(c);
+        printf("[3] Evaluate f(c) = f(%f) = %f\n", c, fc);
         
         % Check if the midpoint is the root
-        if abs(f(c)) < tol
-            root = c;
-            % width of the interval is smaller than predetermined tolerance
-            % if f(c)=0 or |b-a|<tolerance, stop
+        if abs(fc) < tol
+            fprintf('Root found: %f after %d iterations\n', c, iter + 1);
             return;
         end
         
-        % Update interval
-        if iter == 0
-            printf("[3] Evaluate f(c)\n")
-        end
-        if f(a) * f(c) < 0
-            b = c;
-            if iter == 0
-                printf("\t- if f(c) has the same sign as f(a), set a=c\n");
-                printf("\t- if f(c) has the same sign as f(b), set b=c\n");
-                printf("\tf(c)= f(%d) = (%d)\n", c, f(c)) 
-                printf("\tf(b)= f(%d) = (%d)\n", b, f(b)) 
-                printf("\tf(c) has the same sign as f(b). set b=c\n");
-                printf("\troot lies in the left half of the interval\n");
-                printf("\n");
-            end
+        % Update interval based on the sign of f(c)
+        if f(a) * fc < 0
+            b = c; % Root lies in the left half
+            printf("Root lies in the left half of the interval [a, c]\n");
         else
-            a = c;
-            if iter == 0
-                printf("\t- if f(c) has the same sign as f(a), set a=c\n");
-                printf("\t- if f(c) has the same sign as f(b), set b=c\n");
-                printf("\n");
-                printf("\tf(c)= f(%d) = (%d)\n", c, f(c)) 
-                printf("\tf(a)= f(%d) = (%d)\n", a, f(a)) 
-                printf("\troot lies in the right half of the interval\n");
-                printf("\n");
-            end
+            a = c; % Root lies in the right half
+            printf("Root lies in the right half of the interval [c, b]\n");
         end
-
-        % Update interval width and iteration count
+        
+        % Update width of the interval and iteration count
         width = b - a;
         iter = iter + 1;
-        
+
+        printf("Updated interval: [%f, %f] with width = %f\n", a, b, width);
+        printf("\n");
     end
-    
-    % If max_iterations reached without convergence, display a warning
+
+    % Final output
     if iter == max_iterations
-        warning('Maximum number of iterations reached without convergence');
+        fprintf('Maximum number of iterations reached without convergence.\n');
+    else
+        fprintf('Converged to root: %f after %d iterations\n', (a + b) / 2, iter);
     end
-    
-    % Return the root found (approximation)
-    root = (a + b) / 2;
-    solution = root;
-    no_iterations = iter;
 end
 
-% % Parse command line arguments
-if nargin != 5
-    printf("Usage: octave 000_bisection.m <function_definition> <a> <b> <tol> <max_iterations>\n");
-    printf("Example: octave 000_bisection.m '3*x^3 - 10*x^2 + 13/4 + 15/2' 0 2 1e-6 100\n");
-    return;
-end
-
+% % Uncomment the following line if you want to execute the method directly
 bisection_method()

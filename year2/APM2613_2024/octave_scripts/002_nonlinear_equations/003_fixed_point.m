@@ -1,18 +1,21 @@
 function fixed_point_method()
-
+ 
     % Parse command line arguments
-    if nargin != 4
-        printf("Usage: octave 003_fixed_point.m <function_definition> <initial_guess> <tol> <max_iterations>\n");
-        printf("Example: octave 003_fixed_point.m 'cos(x)' 0 1e-6 100\n");
-        return;
-    end
+    % if nargin != 4
+    %     printf("Usage: octave 003_fixed_point.m <function_definition> <initial_guess> <tol> <max_iterations>\n");
+    %     printf("Example: octave 003_fixed_point.m 'cos(x)' 0 1e-6 100\n");
+    %     return;
+    % end
     
+    printf("f:\t\t %s\n", argv(){1});
+    printf("a:\t\t %s\n", argv(){2});
+    printf("b:\t\t %s\n", argv(){3});
+    printf("tol:\t\t %s\n", argv(){4});
     % Convert input arguments to numerical values
     f_str = argv(){1};
     x0 = str2num(argv(){2});
     tol = str2num(argv(){3});
     max_iterations = str2num(argv(){4});
-    
     % Define the function f(x) using the input string
     f = str2func(['@(x)' f_str]);
     
@@ -60,4 +63,4 @@ function fixed_point_method()
 end
 
 % % Uncomment the following line if you want to execute the method directly
-% fixed_point_method()
+fixed_point_method()

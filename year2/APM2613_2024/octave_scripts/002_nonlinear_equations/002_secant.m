@@ -1,72 +1,72 @@
 function secant_method()
-    % Convert command-line arguments to functions
-    f = argv(){1};
-    func = str2func(['@(x)' f]);
+
+    % Parse command line arguments
+    % if nargin != 5
+    %     printf("Usage: octave 002_secant.m <function_definition> <x0> <x1> <tol> <max_iterations>\n");
+    %     printf("Example: octave 002_secant.m '3*x^3 - 10*x^2 + 13/4 + 15/2' 0 2 1e-6 100\n");
+    %     return;
+    % end
+
+    % Convert input arguments to numerical values
+    f_str = argv(){1};
     x0 = str2num(argv(){2});
     x1 = str2num(argv(){3});
-    tolerance = str2num(argv(){4});
+    tol = str2num(argv(){4});
+    max_iterations = str2num(argv(){5});
 
-    [solution,no_iterations] = secant(func, x0, x1, tolerance);
-    if no_iterations > 0   % Solution found
-        printf("[4] Repeat steps 2-3 until convergence, stop\n");
-        printf("\tno. of iterations: %d\n",no_iterations+1);
-        printf("\n");
-        fprintf('A solution is: %f\n', solution)
-    else
-        fprintf('Abort execution.\n')
-    end
-end
+    % Define the function f(x) using the input string
+    f = str2func(['@(x)' f_str]);
 
-function [solution,no_iterations] = secant(f, x0, x1, tolerance)
+    % Initialize iteration counter
+    iter = 0;
 
-    printf("f:\t\t %s\n", argv(){1});
-    printf("a:\t\t %s\n", argv(){2});
-    printf("b:\t\t %s\n", argv(){3});
-    printf("tolerance:\t\t %s\n", argv(){4});
-    printf("\n");
-    f_x0 = f(x0);
-    f_x1 = f(x1);
-    iteration_counter = 0;
-    while abs(f_x1) > tolerance && iteration_counter < 100
-        if iteration_counter == 0
-            printf("-------------------------------------------------------- iter: %d\n",iteration_counter);
-            printf("[1] Find points x_0 and x_1 such that x_0<x_1 and f(x_0)⋅f(x_1)<0\n");
+    % Debugging output for initial values
+    printf("f:\t\t %s\n", f_str);
+    printf("Initial guesses:\tx0 = %f, x1 = %f\n", x0, x1);
+    printf("Tolerance:\t %e\n", tol);
+    printf("Max iterations:\t %d\n\n", max_iterations);
+
+    % Iterate using the Secant Method
+    while iter < max_iterations
+        % Evaluate function at current guesses
+        f0 = f(x0);
+        f1 = f(x1);
+
+        % Check for division by zero
+        if abs(f1 - f0) < eps
+            error('Function values at guesses are too close. Cannot proceed.');
         end
-        try
-            if iteration_counter == 0
-                printf("[2] find next value x_0 using formula:\n");
-            end
-            denominator = (f_x1 - f_x0)/(x1 - x0);
-            x = x1 - (f_x1)/denominator;
-        catch
-            fprintf('Error! - denominator zero for x = \n', x1)
-            break
+
+        % Calculate the next approximation
+        x2 = x1 - f1 * ((x1 - x0) / (f1 - f0));
+
+        % Debugging output
+        printf("--------------------------------------------------------\n");
+        printf("Iteration: %d\n", iter + 1);
+        printf("Evaluate: f(x0) = %f, f(x1) = %f\n", f0, f1);
+        printf("Next approximation: x2 = %f\n", x2);
+
+        % Check for convergence
+        if abs(x2 - x1) < tol
+            fprintf('Converged to root: %f after %d iterations\n', x2, iter + 1);
+            return;
         end
+
+        % Update guesses for the next iteration
         x0 = x1;
-        x1 = x;
-        f_x0 = f_x1;
-        f_x1 = f(x1);
-        if iteration_counter == 0
-            printf("[3] Evaluate f(c):\n")
-            printf("\tif f(x_2 )=0 then x_2 is an exact root\n")
-            printf("\telse b=x_0\n")
-            printf("\tand a=x_0\n")
-        end
-        iteration_counter = iteration_counter + 1;
+        x1 = x2;
+
+        % Increment iteration counter
+        iter = iter + 1;
     end
-    % Here, either a solution is found, or too many iterations
-    if abs(f_x1) > tolerance
-        iteration_counter = -1;
+
+    % Final output
+    if iter == max_iterations
+        fprintf('Maximum number of iterations reached without convergence.\n');
+    else
+        fprintf('Final approximation: %f after %d iterations\n', x2, iter);
     end
-    solution = x1;
-    no_iterations = iteration_counter;
 end
 
-
-% Parse command-line arguments
-if nargin != 4
-    printf("Usage: octave 002_secant.m 'x^2 - 9' 1000 999 1e-6\n");
-    return;
-endif
-
+% % Uncomment the following line if you want to execute the method directly
 secant_method()
