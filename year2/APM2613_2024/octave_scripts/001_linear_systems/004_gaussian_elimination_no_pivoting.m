@@ -2,13 +2,17 @@ function gaussian_elimination_no_pivoting()
 
     % Parse command line arguments
     % if nargin != 1
-    %     printf("Usage: octave 003_gaussian_elimination_no_pivoting.m <augmented_matrix>\n");
-    %     printf("Example: octave 003_gaussian_elimination_no_pivoting.m '[1 2 -1 3; 2 3 3 15; 3 2 1 10]'\n");
+    %     printf("Usage: octave 004_gaussian_elimination_no_pivoting.m <augmented_matrix>\n");
+    %     printf("Example: octave 004_gaussian_elimination_no_pivoting.m '[1 2 -1 3; 2 3 3 15; 3 2 1 10]'\n");
     %     return;
     % end
+ 
 
-    % Convert input argument to numerical matrix
-    A = eval(argv(){1});  % Augmented matrix
+    input_str = argv(){1};
+    clean_str = regexprep(input_str, '[\\/]', '');  % Removes all '/' and '\' characters
+    % disp(clean_str);
+    % Convert the cleaned string to a matrix
+    A = eval(clean_str);  % Augmented matrix
 
     [rows, cols] = size(A);
     n = rows;
@@ -36,10 +40,23 @@ function gaussian_elimination_no_pivoting()
     x = zeros(n, 1);  % Solution vector
     printf("--------------------------------------------------------\n");
     printf("Back substitution:\n");
-    
+
     for i = n:-1:1
-        x(i) = (A(i, end) - A(i, 1:end-1) * x) / A(i, i);
-        printf("Solving for x%d: %f\n", i, x(i));
+        sum = A(i, end);  % Start with the last column value
+
+        % Build the equation string for debugging
+        equation = sprintf("x%d = (%.4f ", i, sum);
+
+        for j = i+1:n
+            sum = sum - A(i, j) * x(j);  % Subtract the contributions of already solved variables
+            equation = sprintf("%s- (%.4f * x%d) ", equation, A(i, j), j);
+        end
+
+        x(i) = sum / A(i, i);
+        equation = sprintf("%s)/ %.4f = %.4f\n", equation, A(i, i), x(i));
+        
+        % Print the equation used to solve for x_i
+        printf("%s", equation);
     end
 
     % Final output
