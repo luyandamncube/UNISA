@@ -66,7 +66,7 @@ result = fn_arearect(3,5);
 From the prescribed book, Numerical Analysis (Richard L. Burden, Douglas J. Faires, Annette M. Burden), this would be the recommended order to complete the syllabus in:
 
 C2: Solutions of Equations in One Variable
-- 2.1 The Bisection Method 
+- 2.1 [The Bisection Method](https://github.com/luyandamncube/UNISA/tree/master/year2/APM2613_2024/octave_scripts/002_nonlinear_equations/000_bisection.m)
 - 2.2 Fixed-Point Iteration 
 - 2.3 Newton's Method and Its Extensions 
 - 2.4 Error Analysis for Iterative Methods 
