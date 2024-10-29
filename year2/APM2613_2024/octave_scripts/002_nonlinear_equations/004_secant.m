@@ -2,8 +2,8 @@ function secant_method()
 
     % Parse command line arguments
     % if nargin != 5
-    %     printf("Usage: octave 002_secant.m <function_definition> <x0> <x1> <tol> <max_iterations>\n");
-    %     printf("Example: octave 002_secant.m '3*x^3 - 10*x^2 + 13/4 + 15/2' 0 2 1e-6 100\n");
+    %     printf("Usage: octave 004_secant.m <function_definition> <x0> <x1> <tol> <max_iterations>\n");
+    %     printf("Example: octave 004_secant.m '3*x^3 - 10*x^2 + 13/4 + 15/2' 0 2 1e-6 100\n");
     %     return;
     % end
 

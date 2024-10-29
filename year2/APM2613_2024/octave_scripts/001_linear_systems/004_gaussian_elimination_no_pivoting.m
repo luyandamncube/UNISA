@@ -61,6 +61,7 @@ function gaussian_elimination_no_pivoting()
 
     % Final output
     fprintf('Final solution:\n');
+    
     disp(x);
 end
 
