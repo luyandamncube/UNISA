@@ -1,64 +1,77 @@
-function lu_factorization()
+function lu_factorization_with_inputs()
 
     % Parse command line arguments
-    % if nargin != 1
-    %     printf("Usage: octave 005_lu_factorization.m <matrix>\n");
-    %     printf("Example: octave 005_lu_factorization.m '[4 3; 6 3]'\n");
+    % if nargin != 4
+    %     printf("Usage: octave 005_lu_factorization_with_inputs.m <matrix_L> <matrix_U> <vector_y> <vector_b>\n");
+    %     printf("Example: octave 005_lu_factorization_with_inputs.m '[2 0 0; -1 1 0; 3 2 -1]' '[1 1 1; 0 1 2; 0 0 1]' '[x1; x2; x3]' '[-1; 3; 0]'\n");
     %     return;
     % end
 
-    % Convert input argument to numerical matrix
-    A = eval(argv(){1});  % Input square matrix
+    % Convert input arguments to numerical matrices/vectors
+    L = eval(argv(){1});  % Lower triangular matrix L
+    U = eval(argv(){2});  % Upper triangular matrix U
+    y = zeros(size(U, 1), 1);  % Placeholder for y vector
+    b = eval(argv(){4});  % Vector of constants b
 
-    [n, m] = size(A);
-
-    if n != m
-        error('Matrix must be square for LU factorization.');
-    end
-
-    printf("Input Matrix A:\n");
-    disp(A);
+    % Display the input matrices and vectors
+    printf("Input Matrix L:\n");
+    disp(L);
+    printf("Input Matrix U:\n");
+    disp(U);
+    printf("Input Vector b:\n");
+    disp(b);
     printf("\n");
 
-    % Initialize L and U matrices
-    L = eye(n); % L is initialized to the identity matrix
-    U = zeros(n); % U is initialized to zeros
+    % Verify sizes
+    [n, m] = size(L);
+    if n != m
+        error('Matrix L must be square.');
+    end
 
-    % Perform LU factorization
+    if size(U, 1) != n || size(U, 2) != n
+        error('Matrix U must be square and the same size as L.');
+    end
+    
+    if length(b) != n
+        error('Vector b must have the same number of elements as the rows of L and U.');
+    end
+
+    % Solve Ly = b using forward substitution
+    y_solution = zeros(n, 1);
+    printf("Forward substitution steps (Ly = b):\n");
     for i = 1:n
-        for j = i:n
-            U(i, j) = A(i, j) - L(i, 1:i-1) * U(1:i-1, j); % Compute U
-        end
-        for j = i+1:n
-            L(j, i) = (A(j, i) - L(j, 1:i-1) * U(1:i-1, i)) / U(i, i); % Compute L
-        end
+        % Calculate the current value of y
+        y_solution(i) = (b(i) - L(i, 1:i-1) * y_solution(1:i-1)) / L(i, i);
+        
+        % Debugging output for current step
+        printf("Step %d: y[%d] = (b[%d] - L[%d, 1:%d] * y[1:%d]) / L[%d, %d]\n", ...
+               i, i, i, i, i-1, i-1, i, i);
+        printf("   = (%.4f - %.4f) / %.4f\n", b(i), L(i, 1:i-1) * y_solution(1:i-1), L(i, i));
+        printf("   y[%d] = %.4f\n\n", i, y_solution(i));
+    end
 
-        % Debugging output
-        printf("Step %d:\n", i);
-        printf("Matrix L:\n");
-        disp(L);
-        printf("Matrix U:\n");
-        disp(U);
-        printf("\n");
+    % Output for y
+    printf("Solution for y (Ly = b):\n");
+    disp(y_solution);
+
+    % Now solve Ux = y using back substitution
+    x = zeros(n, 1);
+    printf("Back substitution steps (Ux = y):\n");
+    for i = n:-1:1
+        % Calculate the current value of x
+        x(i) = (y_solution(i) - U(i, i+1:n) * x(i+1:n)) / U(i, i);
+        
+        % Debugging output for current step
+        printf("Step %d: x[%d] = (y_solution[%d] - U[%d, %d:%d] * x[%d:%d]) / U[%d, %d]\n", ...
+               n-i+1, i, i, i, i+1, n, i+1, n, i, i);
+        printf("   = (%.4f - %.4f) / %.4f\n", y_solution(i), U(i, i+1:n) * x(i+1:n), U(i, i));
+        printf("   x[%d] = %.4f\n\n", i, x(i));
     end
 
     % Final output
-    printf("Final L matrix:\n");
-    disp(L);
-    printf("Final U matrix:\n");
-    disp(U);
-    
-    % Verify the result by multiplying L and U
-    LU = L * U;
-    printf("Product of L and U:\n");
-    disp(LU);
-    
-    if norm(LU - A) < 1e-10
-        printf("LU factorization is verified: L * U = A\n");
-    else
-        printf("LU factorization verification failed!\n");
-    end
+    printf("Final solution x (Ux = y):\n");
+    disp(x);
 end
 
 % % Uncomment the following line if you want to execute the method directly
-lu_factorization()
+lu_factorization_with_inputs()
