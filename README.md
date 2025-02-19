@@ -31,14 +31,14 @@ A collection of modules I completed whilst finishing my Computer Science & Mathe
 - [x] [PLS2607 - Philosophy of Science](https://github.com/luyandamncube/UNISA/tree/master/year2/PLS2607)
 
 ## Third Year
-- [ ] APM3711 - Numerical Methods II 	Pre-requisite:COS2633
+- [ ] APM3711 - Numerical Methods II 	Pre-requisite:COS2633/APM2613
 - [ ] [COS3701 - Theoretical Computer Science III 	Pre-requisite:COS2601](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3701_2024)
 - [ ] [COS3711 - Advanced Programming 	Pre-requisite:COS2611 & COS2614](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3711)
 - [x] [COS3721 - Operating Systems and Architecture 	Pre-requisite:COS2614](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3721_2024)
 - [x] [COS3751 - Techniques of Artificial Intelligence 	Pre-requisite:COS2611 & COS2661](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3751)
 - [x] [COS3761 - Formal Logic III 	Pre-requisite:COS2661](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3761)
 - [ ] MAT3701 - Linear Algebra III 	Pre-requisite:MAT2611
-- [ ] [MAT3705 - Complex Analysis 	Pre-requisite:MAT2615](https://github.com/luyandamncube/UNISA/tree/master/year3/MAT3705)
+- [ ] [MAT3705 - Complex Analysis 	Pre-requisite:MAT2615, MAT2613](https://github.com/luyandamncube/UNISA/tree/master/year3/MAT3705)
 - [x] [MAT3706/APM3706 - Ordinary Differential Equations 	Pre-requisite:APM2611](https://github.com/luyandamncube/UNISA/tree/master/year3/APM3706_2024)
 - [ ] [MAT3707 - Discrete Mathematics: Combinatorics 	Pre-requisite:MAT2612](https://github.com/luyandamncube/UNISA/tree/master/year3/MAT3707)
 - [ ] MAT3711 - Real Analysis II 	Pre-requisite:MAT2613
