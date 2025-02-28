@@ -32,7 +32,7 @@ A collection of modules I completed whilst finishing my Computer Science & Mathe
 
 ## Third Year
 - [ ] APM3711 - Numerical Methods II 	Pre-requisite:COS2633/APM2613
-- [ ] [COS3701 - Theoretical Computer Science III 	Pre-requisite:COS2601](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3701_2024)
+- [x] [COS3701 - Theoretical Computer Science III 	Pre-requisite:COS2601](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3701_2024)
 - [ ] [COS3711 - Advanced Programming 	Pre-requisite:COS2611 & COS2614](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3711)
 - [x] [COS3721 - Operating Systems and Architecture 	Pre-requisite:COS2614](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3721_2024)
 - [x] [COS3751 - Techniques of Artificial Intelligence 	Pre-requisite:COS2611 & COS2661](https://github.com/luyandamncube/UNISA/tree/master/year3/COS3751)
