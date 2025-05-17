@@ -1,6 +1,6 @@
 #include <QCoreApplication>
 #include <QDebug>
-#include "TextAnalyzer.h"
+#include "CountWords.h"
 
 #include <QFile>
 #include <QFileInfo>
@@ -10,6 +10,7 @@
 
 void printHelp() {
     qDebug() << "Usage: count [flags] file1.txt [file2.txt...]";
+    qDebug() << "EXAMPLE: count -abc test1.txt test2.txt";
     qDebug() << "Flags:";
     qDebug() << "  -a  Capital-start words >4 chars";
     qDebug() << "  -b  Hyphenated words (not start/end)";
@@ -27,36 +28,45 @@ int main(int argc, char *argv[])
     // }
 
     QStringList args = app.arguments();
-    args.removeFirst(); // remove executable name
+    args.removeFirst();
 
-    // if (args.isEmpty()) {
-    //     qWarning() << "[DEBUG] No arguments provided.";
-    //     printHelp();
-    //     return 0;
-    // }
+    if (args.isEmpty()) {
+        qWarning() << "[DEBUG] No arguments provided.";
+        printHelp();
+        return 0;
+    }
 
-    bool flagA = false, flagB = false, flagC = false, flagD = false;
+    bool flagA = false;
+    bool flagB = false;
+    bool flagC = false;
+    bool flagD = false;
+
     QStringList files;
+
+    QSet<QChar> validFlags = {'a', 'b', 'c', 'd'};
 
     for (const QString &arg : args) {
         if (arg.startsWith('-')) {
-            for (QChar ch : arg.mid(1)) {
-                switch (ch.toLatin1()) {
-                case 'a': flagA = true; break;
-                case 'b': flagB = true; break;
-                case 'c': flagC = true; break;
-                case 'd': flagD = true; break;
-                default:
-                    // qWarning() << "[DEBUG] Unknown flag:" << ch;
+            QString flags = arg.mid(1);
+
+            for (QChar ch : flags) {
+                if (!validFlags.contains(ch)) {
                     printHelp();
                     return 1;
                 }
+
+                // Set corresponding flags
+                if (ch == 'a') flagA = true;
+                else if (ch == 'b') flagB = true;
+                else if (ch == 'c') flagC = true;
+                else if (ch == 'd') flagD = true;
             }
         } else {
             files.append(arg);
         }
     }
 
+    
     if (!flagA && !flagB && !flagC && !flagD) {
         // qDebug() << "[DEBUG] No specific flags provided; enabling all.";
         flagA = flagB = flagC = flagD = true;
@@ -78,12 +88,12 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    TextAnalyzer analyzer(flagA, flagB, flagC, flagD);
+    CountWords parse(flagA, flagB, flagC, flagD);
     for (const QString &fileName : files) {
         // qDebug() << "[DEBUG] Processing file:" << fileName;
         // qDebug() << "[DEBUG] File exists?" << QFile::exists(fileName);
         // qDebug() << "[DEBUG] Absolute path attempted:" << QFileInfo(fileName).absoluteFilePath();
-        analyzer.analyzeFile(fileName);
+        parse.parseFile(fileName);
     }
 
 

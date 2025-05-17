@@ -1,14 +1,14 @@
-#ifndef TEXTANALYZER_H
-#define TEXTANALYZER_H
+#ifndef COUNTWORDS_H
+#define COUNTWORDS_H
 
 #include <QString>
 #include <QStringList>
 
-class TextAnalyzer {
+class CountWords {
 public:
-    TextAnalyzer(bool flagA, bool flagB, bool flagC, bool flagD);
+    CountWords(bool flagA, bool flagB, bool flagC, bool flagD);
 
-    void analyzeFile(const QString &fileName);
+    void parseFile(const QString &fileName);
 
 private:
     bool flagA;
@@ -16,10 +16,9 @@ private:
     bool flagC;
     bool flagD;
 
-    QString cleanText(const QString &text) const;
     QStringList extractWords(const QString &text) const;
 
     void countPatterns(const QStringList &words, const QString &fileName) const;
 };
 
-#endif // TEXTANALYZER_H
+#endif // COUNTWORDS_H

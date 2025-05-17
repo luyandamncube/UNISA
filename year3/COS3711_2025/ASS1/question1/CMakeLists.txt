@@ -14,8 +14,8 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
 
 add_executable(count
   main.cpp
-  TextAnalyzer.h
-  TextAnalyzer.cpp
+  CountWords.h
+  CountWords.cpp
 
 )
 target_link_libraries(count Qt${QT_VERSION_MAJOR}::Core)
