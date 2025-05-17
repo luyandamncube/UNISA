@@ -7,6 +7,10 @@ set(CMAKE_AUTOMOC ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
+qt_add_resources(APP_RESOURCES resources.qrc)
+
+file(COPY ${CMAKE_SOURCE_DIR}/icons DESTINATION ${CMAKE_BINARY_DIR})
+
 add_executable(BankingApp
     main.cpp
     MainWindow.cpp
@@ -15,6 +19,7 @@ add_executable(BankingApp
     MainWindow.h
     Transaction.h
     TransactionList.h
+    ${APP_RESOURCES}
 )
 
 

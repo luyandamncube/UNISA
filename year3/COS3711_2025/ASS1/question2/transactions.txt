@@ -1,0 +1,4 @@
+Deposit: R1000.00 on Sat May 17 2025 at 15:59:51
+Deposit: R50.00 on Sat May 17 2025 at 15:59:54
+Deposit: R12.00 on Sat May 17 2025 at 15:59:57
+Withdrawal: R3.00 on Sat May 17 2025 at 16:00:01

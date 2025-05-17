@@ -25,9 +25,34 @@ MainWindow::MainWindow(QWidget *parent)
     amountInput->setPlaceholderText("0.00");
     layout->addWidget(amountInput);
 
-    depositButton = new QPushButton(QIcon(":/icons/deposit.png"), "Deposit", this);
-    withdrawButton = new QPushButton(QIcon(":/icons/withdraw.png"), "Withdrawal", this);
-    toFileButton = new QPushButton(QIcon(":/icons/save.png"), "To file", this);
+    qDebug() << "[DEBUG] Current working directory:" << QDir::currentPath();
+    QDir iconDir("icons");
+    qDebug() << "[DEBUG] Icons in folder:" << iconDir.entryList(QDir::Files);
+
+
+    QStringList iconNames = {"deposit.png", "withdraw.png", "save.png"};
+
+    for (const QString &name : iconNames) {
+        QString path = QDir("icons").absoluteFilePath(name);
+        QFileInfo file(path);
+
+        // qDebug() << "[DEBUG] Icon file path:" << path;
+        // qDebug() << "         Exists?" << file.exists();
+    }
+
+    QIcon depositIcon(QDir("icons").absoluteFilePath("deposit.png"));
+    QIcon withdrawIcon(QDir("icons").absoluteFilePath("withdraw.png"));
+    QIcon saveIcon(QDir("icons").absoluteFilePath("save.png"));
+
+    // Debugging: Check if icons are loaded properly
+    if (depositIcon.isNull()) qWarning() << "[ERROR] Failed to load deposit.png";
+    if (withdrawIcon.isNull()) qWarning() << "[ERROR] Failed to load withdraw.png";
+    if (saveIcon.isNull()) qWarning() << "[ERROR] Failed to load save.png";
+
+    depositButton = new QPushButton(depositIcon, "Deposit", this);
+    withdrawButton = new QPushButton(withdrawIcon, "Withdrawal", this);
+    toFileButton = new QPushButton(saveIcon, "To file", this);
+
 
     auto buttonLayout = new QHBoxLayout();
     buttonLayout->addWidget(depositButton);
@@ -47,8 +72,9 @@ void MainWindow::handleDeposit() {
     if (amount <= 0) return;
 
     Transaction *tx = new Transaction(amount, TransactionType::Deposit);
+
     TransactionList::instance().addTransaction(tx);
-    TransactionList::instance().writeToConsole();
+    qDebug() << tx->toString();
     clearInputs();
 }
 
@@ -57,10 +83,17 @@ void MainWindow::handleWithdrawal() {
     if (amount <= 0) return;
 
     Transaction *tx = new Transaction(amount, TransactionType::Withdrawal);
-    TransactionList::instance().addTransaction(tx);
-    TransactionList::instance().writeToConsole();
+
+    if (!TransactionList::instance().addTransaction(tx)) {
+        QMessageBox::warning(this, "Withdrawal Failed", "Insufficient funds.");
+        delete tx;
+        return;
+    }
+
+    qDebug() << tx->toString();
     clearInputs();
 }
+
 
 void MainWindow::saveToFile() {
     QString fileName = QFileDialog::getSaveFileName(this, "Save Transactions", "", "Text Files (*.txt)");
