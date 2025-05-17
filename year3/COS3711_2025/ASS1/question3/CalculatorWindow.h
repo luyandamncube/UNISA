@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <QDoubleSpinBox>
 #include <QLCDNumber>
+#include "FocusableSpinBox.h"
 
 class CalculatorWindow : public QMainWindow {
     Q_OBJECT
@@ -14,20 +15,30 @@ public:
 
 private slots:
     void handleOperation();
-    void clearAll();
+    void handleDigitInput(const QString &digit);
+    void onInput1Focus();
+    void onInput2Focus();
 
 private:
-    QDoubleSpinBox *input1;
-    QDoubleSpinBox *input2;
+    FocusableSpinBox *input1;
+    FocusableSpinBox *input2;
     QLCDNumber *resultDisplay;
     QPushButton *addButton;
     QPushButton *subButton;
     QPushButton *mulButton;
     QPushButton *divButton;
-    QPushButton *clearButton;
+
+    QString buffer1;
+    QString buffer2;
+
+
+    FocusableSpinBox *lastFocusedInput = nullptr;
+    FocusableSpinBox *activeInput = nullptr;
 
     void setupUi();
-    void performCalculation(const QString& opSymbol);
+    void applyStyle(QPushButton *button);
+
+
 };
 
 #endif // CALCULATORWINDOW_H

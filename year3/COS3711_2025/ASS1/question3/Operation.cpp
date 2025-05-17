@@ -14,7 +14,6 @@ double Multiplication::compute(double a, double b) const {
 }
 
 double Division::compute(double a, double b) const {
-    if (b == 0.0)
-        throw std::runtime_error("Division by zero");
+    if (b == 0.0) throw std::runtime_error("Division by zero");
     return a / b;
 }

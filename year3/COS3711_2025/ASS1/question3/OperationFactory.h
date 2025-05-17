@@ -3,11 +3,12 @@
 
 #include "Operation.h"
 #include <QString>
+#include <memory>
 
 class OperationFactory {
 public:
     static OperationFactory& instance();
-    Operation* create(const QString& opSymbol) const;
+    std::unique_ptr<Operation> create(const QString& op) const;
 
 private:
     OperationFactory() = default;
