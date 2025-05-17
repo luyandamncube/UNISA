@@ -22,11 +22,6 @@ int main(int argc, char *argv[])
 {
     QCoreApplication app(argc, argv);
 
-    // qDebug() << "[DEBUG] App started. Raw arguments:";
-    // for (int i = 0; i < argc; ++i) {
-    //     qDebug() << "  argv[" << i << "] =" << argv[i];
-    // }
-
     QStringList args = app.arguments();
     args.removeFirst();
 
